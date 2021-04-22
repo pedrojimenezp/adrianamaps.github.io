@@ -1,0 +1,23 @@
+#map {
+  height: 90%;
+}
+
+html,
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  margin-top: 10px;
+  display: block;
+  text-align: center;
+}
+
+header a {
+  margin-right: 50px;
+  margin-left: 50px;
+}
