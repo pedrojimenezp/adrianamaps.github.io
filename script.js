@@ -127,7 +127,7 @@ async function printCoords() {
   ];
   for (let address of addresses) {
     const result = await axios.get(
-      `https://maps.googleapis.com/maps/api/geocode/json?address=${address},sahagun,cordoba,colombia&key=AIzaSyD8zJOqTanCeclESn1eZF-lMD16me2OfII`
+      `https://maps.googleapis.com/maps/api/geocode/json?address=${address},sahagun,cordoba,colombia&key=GOOGLE_API_KEY`
     );
     const location = result?.data?.results[0]?.geometry?.location || {};
     console.log(`${location.lat}, ${location.lng}, ${address}`);
