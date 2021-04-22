@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Puntos Criticos</title>
+    <title>Siniestralidad Rural</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8zJOqTanCeclESn1eZF-lMD16me2OfII&libraries=&v=weekly"></script>
@@ -14,10 +14,10 @@
     <header>
       <a href="./siniestralidad-urbana.html">Siniestralidad Urbana</a>
       <a href="./frecuencia-urbana.html">Frecuencia Urbana</a>
-      <a href="./siniestralidad-rural.html">Siniestralidad Rural</a>
+      <a href="" class="active">Siniestralidad Rural</a>
       <a href="./frecuencia-rural.html">Frecuencia Rural</a>
-      <a href="" class="active">Puntos Criticos</a>
-      <h1>Puntos Criticos</h1>
+      <a href="./puntos-criticos.html">Puntos Criticos</a>
+      <h1>Siniestralidad Rural</h1>
     </header>
     <div id="map"></div>
     <script src="./drawmap.js"></script>
@@ -25,8 +25,8 @@
       drawmap({
         domElement: 'map',
         center: { lat: 8.947295068363841, lng: -75.44610417492649 },
-        positions: PUNTOS_CRITICOS,
-        options: { complexInfoWindow: true },
+        positions: SINIESTRALIDAD_RURAL,
+        options: { complexInfoWindow: false },
       });
     </script>
   </body>

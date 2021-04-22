@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Siniestralidad Urbana</title>
+    <title>Frecuencia Rural</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8zJOqTanCeclESn1eZF-lMD16me2OfII&libraries=&v=weekly"></script>
@@ -12,9 +12,12 @@
 
   <body>
     <header>
-      <a href="./rural.html">Siniestralidad Rural</a>
+      <a href="./siniestralidad-urbana.html">Siniestralidad Urbana</a>
+      <a href="./frecuencia-urbana.html">Frecuencia Urbana</a>
+      <a href="./siniestralidad-rural.html">Siniestralidad Rural</a>
+      <a href="" class="active">Frecuencia Rural</a>
       <a href="./puntos-criticos.html">Puntos Criticos</a>
-      <h1>Siniestralidad Urbana</h1>
+      <h1>Frecuencia Rural</h1>
     </header>
     <div id="map"></div>
     <script src="./drawmap.js"></script>
@@ -22,7 +25,7 @@
       drawmap({
         domElement: 'map',
         center: { lat: 8.947295068363841, lng: -75.44610417492649 },
-        positions: SINIESTRALIDAD_URBANA,
+        positions: FRECUENCIA_RURAL,
         options: { complexInfoWindow: false },
       });
     </script>

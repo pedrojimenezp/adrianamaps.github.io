@@ -51,10 +51,12 @@ function drawmap({ domElement, center, positions, options }) {
 }
 
 function handleMarkerClickSimple(positions, index, marker, map) {
-  const [lat, lng, name] = positions[index];
+  const [lat, lng, name, accidentes] = positions[index];
   const infowindow = new google.maps.InfoWindow({
     content: `
-      <p><strong>${name}</strong></p>`,
+      <p><strong>${name}</strong></p>
+      <p><strong>Numero de accidentes viales:</strong>: ${accidentes}</p>
+      `,
   });
   infowindow.open(map, marker);
 }
@@ -73,7 +75,7 @@ function handleMarkerClickComplex(positions, index, marker, map) {
   ] = positions[index];
   const infowindow = new google.maps.InfoWindow({
     content: `
-        <p><strong>Nombre</strong>: ${name}</p>
+        <p><strong>${name}</strong></p>
         <p><strong>Danios</strong>: ${danios}</p>
         <p><strong>Heridos</strong>: ${heridos}</p>
         <p><strong>Muertos</strong>: ${muertos}</p>
