@@ -1,7 +1,7 @@
 function drawmap({ domElement, center, positions, options }) {
   let map;
   map = new google.maps.Map(document.getElementById(domElement), {
-    zoom: 13,
+    zoom: 16,
     center,
   });
 
@@ -35,6 +35,14 @@ function drawmap({ domElement, center, positions, options }) {
         path: google.maps.SymbolPath.CIRCLE,
         scale: i < 3 ? 12 : 8,
         strokeColor: i < 3 ? 'crimson' : 'steelblue',
+      };
+    } else {
+      markerOptions.icon = {
+        path: google.maps.SymbolPath.CIRCLE,
+        fillColor: 'crimson',
+        strokeColor: 'crimson',
+        scale: 3,
+        strokeWeight: 6,
       };
     }
 
