@@ -17,7 +17,7 @@ function drawmap({ domElement, center, positions, options }) {
   ]);
 
   for (let i in positions) {
-    const [lat, lng, title] = positions[i];
+    const [lat, lng, title, _, color] = positions[i];
     const position = {
       lat,
       lng,
@@ -43,6 +43,7 @@ function drawmap({ domElement, center, positions, options }) {
         strokeColor: 'crimson',
         scale: 3,
         strokeWeight: 6,
+        strokeColor: color,
       };
     }
 
